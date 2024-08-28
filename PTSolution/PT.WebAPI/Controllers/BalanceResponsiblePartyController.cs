@@ -7,6 +7,9 @@ using PT.WebAPI.Helpers;
 
 namespace PT.WebAPI.Controllers
 {
+    /// <summary>
+    /// Balance Responsible Party Controller
+    /// </summary>
     [Produces("application/json")]
     [Route("api/balance-responsible-party")]
     [ApiController]
@@ -16,7 +19,12 @@ namespace PT.WebAPI.Controllers
         private readonly IBalanceResponsibleParty _repository;
         private readonly ILogger<BalanceResponsiblePartyController> _logger;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <param name="repository"></param>
+        /// <param name="logger"></param>
         public BalanceResponsiblePartyController(IConfiguration configuration, IBalanceResponsibleParty repository, ILogger<BalanceResponsiblePartyController> logger)
         {
             _configuration = configuration;
@@ -25,7 +33,7 @@ namespace PT.WebAPI.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Get the list of balance responsible parties
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -38,10 +46,10 @@ namespace PT.WebAPI.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Get a balance responsible party by country and code
         /// </summary>
-        /// <param name="country"></param>
-        /// <param name="code"></param>
+        /// <param name="country">Country code</param>
+        /// <param name="code">Code</param>
         /// <returns></returns>
         /// <exception cref="BadHttpRequestException"></exception>
         [HttpGet("{country}/{code}")]
@@ -56,7 +64,7 @@ namespace PT.WebAPI.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Initialize data from an external service. The list is only initialized if it is empty.
         /// </summary>
         /// <returns></returns>
         /// <exception cref="BadHttpRequestException"></exception>

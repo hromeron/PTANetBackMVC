@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PT.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:PT.WebAPI.Controllers.BalanceResponsiblePartyController">
+            <summary>
+            Balance Responsible Party Controller
+            </summary>
+        </member>
+        <member name="M:PT.WebAPI.Controllers.BalanceResponsiblePartyController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,PT.BLL.Interfaces.IBalanceResponsibleParty,Microsoft.Extensions.Logging.ILogger{PT.WebAPI.Controllers.BalanceResponsiblePartyController})">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <param name="repository"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:PT.WebAPI.Controllers.BalanceResponsiblePartyController.Get">
+            <summary>
+            Get the list of balance responsible parties
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PT.WebAPI.Controllers.BalanceResponsiblePartyController.Get(System.String,System.String)">
+            <summary>
+            Get a balance responsible party by country and code
+            </summary>
+            <param name="country">Country code</param>
+            <param name="code">Code</param>
+            <returns></returns>
+            <exception cref="T:Microsoft.AspNetCore.Http.BadHttpRequestException"></exception>
+        </member>
+        <member name="M:PT.WebAPI.Controllers.BalanceResponsiblePartyController.Post">
+            <summary>
+            Initialize data from an external service. The list is only initialized if it is empty.
+            </summary>
+            <returns></returns>
+            <exception cref="T:Microsoft.AspNetCore.Http.BadHttpRequestException"></exception>
+        </member>
+    </members>
+</doc>
