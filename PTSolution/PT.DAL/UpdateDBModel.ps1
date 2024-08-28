@@ -1,2 +1,2 @@
 #GET/UPDATE MODEL
-Scaffold-DbContext "Server=tcp:localhost,1433;Database=TestAlicundeDB; User ID=sql_guest;Password=guest@2024#pt; MultipleActiveResultSets=true; Trust Server Certificate=true;" Microsoft.EntityFrameworkCore.SqlServer -noonconfiguring  -outputdir Model -contextdir Context -context MarketPartiesContext -NoPluralize -f 
+Scaffold-DbContext "Server=tcp:sql_server2022,1433;Database=TestAlicundeDB; User ID=sa;Password=@hrn#321; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -noonconfiguring  -outputdir Model -contextdir Context -context MarketPartiesContext -NoPluralize -f 
