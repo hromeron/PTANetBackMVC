@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PT.BLL.Dto
 {
     /// <summary>
-    /// Balanc eResponsible Party Dto
+    /// Balance Responsible Party Dto
     /// </summary>
     [DataContract(Name = "balance_responsible_party_dto")]
     public class BalanceResponsiblePartyDto

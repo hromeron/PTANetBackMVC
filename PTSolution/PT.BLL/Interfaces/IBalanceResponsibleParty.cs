@@ -18,5 +18,7 @@ namespace PT.BLL.Interfaces
         bool IsEmpty();
 
         void Load(List<BalanceResponsiblePartyDto> data);
+
+        void Clear();
     }
 }

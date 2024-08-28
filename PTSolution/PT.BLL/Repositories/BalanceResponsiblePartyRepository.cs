@@ -61,5 +61,14 @@ namespace PT.BLL.Repositories
 
             _context.SaveChanges();
         }
+
+        public void Clear()
+        {
+            var entites = _context.BalanceResponsibleParties.ToList();
+
+            _context.BalanceResponsibleParties.RemoveRange(entites);
+
+            _context.SaveChanges();
+        }
     }
 }
