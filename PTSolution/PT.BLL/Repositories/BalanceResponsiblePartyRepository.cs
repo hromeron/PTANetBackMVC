@@ -33,21 +33,33 @@ namespace PT.BLL.Repositories
             return entities.Select(e => Mapper.ToDto(e)).ToList();
         }
 
-        public BalanceResponsiblePartyDto Get(string Code)
+        public BalanceResponsiblePartyDto Get(string country, string Code)
         {
-            var entity = _context.BalanceResponsibleParties.FirstOrDefault(e => e.Code == Code);
+            var entity = _context.BalanceResponsibleParties.FirstOrDefault(e => e.Country == country && e.Code == Code);
 
             return Mapper.ToDto(entity);
         }
 
-        public bool Exists(string Code)
+        public bool Exists(string country, string Code)
         {
-            return _context.BalanceResponsibleParties.Any(e => e.Code == Code);
+            return _context.BalanceResponsibleParties.Any(e => e.Country == country && e.Code == Code);
         }
 
-        public bool Load(List<BalanceResponsiblePartyDto> data)
+        public bool IsEmpty()
         {
-            throw new NotImplementedException();
+            return _context.BalanceResponsibleParties.Count() == 0;
+        }
+
+        public void Load(List<BalanceResponsiblePartyDto> data)
+        {
+            foreach (var item in data)
+            {
+                var entity = Mapper.ToEntity(item);
+
+                _context.BalanceResponsibleParties.Add(entity);
+            }
+
+            _context.SaveChanges();
         }
     }
 }

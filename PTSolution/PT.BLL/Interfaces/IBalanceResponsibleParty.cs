@@ -11,10 +11,12 @@ namespace PT.BLL.Interfaces
     {
         List<BalanceResponsiblePartyDto> Get();
 
-        BalanceResponsiblePartyDto Get(string Code);
+        BalanceResponsiblePartyDto Get(string country, string Code);
 
-        bool Exists(string Code);
+        bool Exists(string country, string Code);
 
-        bool Load(List<BalanceResponsiblePartyDto> data);
+        bool IsEmpty();
+
+        void Load(List<BalanceResponsiblePartyDto> data);
     }
 }
