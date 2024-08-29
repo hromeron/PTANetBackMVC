@@ -10,10 +10,14 @@
     <DockerServiceName>pt.dockerwebapi</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Db\Dockerfile" />
+    <None Include="db\entrypoint.sh" />
+    <None Include="db\run-initialization.sh" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="Db\init.sql" />
   </ItemGroup>
 </Project>
